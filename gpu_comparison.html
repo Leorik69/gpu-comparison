@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Сравнение видеокарт для рендера мебели</title>
+<style>
+  body { font-family: Segoe UI, Arial, sans-serif; background: #1a1a2e; color: #eaeaea; padding: 24px; }
+  h1 { color: #c6a15b; }
+  table { border-collapse: collapse; width: 100%; margin-top: 16px; }
+  th, td { border: 1px solid #444; padding: 10px 14px; text-align: center; }
+  th { background: #16213e; color: #c6a15b; }
+  tr:nth-child(even) { background: #0f3460; }
+  tr:hover { background: #1a3a5c; }
+  .best { background: #1e4d2b !important; font-weight: bold; }
+  .conclusion { margin-top: 28px; padding: 16px; background: #16213e; border-left: 4px solid #c6a15b; }
+  .note { color: #888; font-size: 0.9em; margin-top: 8px; }
+</style>
+</head>
+<body>
+<h1>Сравнение видеокарт для рендера мебели (Corona / V-Ray / Blender)</h1>
+<table>
+  <tr>
+    <th>Параметр</th>
+    <th>RTX 3050 6 ГБ</th>
+    <th>RTX 3050 Laptop</th>
+    <th>RX 5700 XT</th>
+    <th>RTX 3060 12 ГБ</th>
+    <th>RX 6700 XT</th>
+    <th>RTX 3070</th>
+  </tr>
+  <tr>
+    <td>Архитектура</td><td>Ampere</td><td>Ampere</td><td>RDNA 2</td><td>Ampere</td><td>RDNA 2</td><td>Ampere</td>
+  </tr>
+  <tr>
+    <td>Видеопамять</td><td>6 ГБ GDDR6</td><td>4 ГБ GDDR6</td><td>8 ГБ GDDR6</td><td>12 ГБ GDDR6</td><td>12 ГБ GDDR6</td><td>8 ГБ GDDR6</td>
+  </tr>
+  <tr>
+    <td>Шейдерных блоков</td><td>2304</td><td>2048</td><td>2560</td><td>3584</td><td>2560</td><td>5888</td>
+  </tr>
+  <tr>
+    <td>RT-ядра</td><td>есть</td><td>есть</td><td>нет</td><td>есть</td><td>нет</td><td>есть</td>
+  </tr>
+  <tr>
+    <td>DLSS / FSR</td><td>DLSS 2.0</td><td>DLSS 2.0</td><td>FSR</td><td>DLSS 2.0</td><td>FSR</td><td>DLSS 2.0</td>
+  </tr>
+  <tr>
+    <td>TDP</td><td>130 Вт</td><td>35–80 Вт</td><td>225 Вт</td><td>170 Вт</td><td>230 Вт</td><td>220 Вт</td>
+  </tr>
+  <tr class="best">
+    <td>Corona/V-Ray (рендер сцен)</td><td>средне</td><td>слабо</td><td>хорошо</td><td>отлично</td><td>хорошо</td><td>отлично</td>
+  </tr>
+  <tr class="best">
+    <td>Blender Cycles (OptiX)</td><td>хорошо</td><td>средне</td><td>средне</td><td>отлично</td><td>средне</td><td>отлично</td>
+  </tr>
+  <tr>
+    <td>Сложные сцены мебели (текстуры, HDRI)</td><td>риск нехватки VRAM</td><td>не хватит</td><td>комфортно</td><td>комфортно</td><td>комфортно</td><td>комфортно</td>
+  </tr>
+  <tr>
+    <td>Шум / охлаждение</td><td>тихо</td><td>тихо</td><td>шумно</td><td>средне</td><td>шумно</td><td>средне</td>
+  </tr>
+  <tr>
+    <td>Цена (ориентир, б/у)</td><td>низкая</td><td>низкая</td><td>средняя</td><td>средняя</td><td>средняя</td><td>высокая</td>
+  </tr>
+</table>
+<p class="note">Оценка рендера — относительная, для типичных сцен мебели с материалами и освещением. 12 ГБ VRAM — ключевое преимущество для тяжёлых сцен.</p>
+<div class="conclusion">
+  <strong>Вывод:</strong> Для рендера мебели оптимален <strong>RTX 3060 12 ГБ</strong> — лучший баланс: 12 гигабайт памяти (не упрётесь в лимиты на сложных сценах), OptiX для Blender, DLSS, умеренный TDP. Если бюджет жёсткий — <strong>RX 5700 XT</strong> даёт близкий сырой перформанс за меньшие деньги, но 8 ГБ и отсутствие RT-ядер ограничивают. <strong>RTX 3050</strong> (особенно ноутбучная версия с 4 ГБ) для рендера — слабый вариант: мало памяти и низкая вычислительная мощность. <strong>RTX 3070</strong> — если рендер это основная работа и бюджет позволяет.
+</div>
+</body>
+</html>
